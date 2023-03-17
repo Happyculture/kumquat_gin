@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Kumquat Gin theme alterations.
+ */
+
+/**
+ * Load include files which contain additional theming logic.
+ */
+foreach (glob(\Drupal::service('extension.list.theme')->getPath('kumquat_gin') . '/includes/*.theme') as $file) {
+  include $file;
+}
