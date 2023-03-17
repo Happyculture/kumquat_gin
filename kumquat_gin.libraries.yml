@@ -1,0 +1,4 @@
+paragraphs_improvements:
+   css:
+    theme:
+      css/paragraphs_improvements.css : {}

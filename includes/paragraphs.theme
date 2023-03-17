@@ -1,0 +1,62 @@
+<?php
+
+/**
+ * @file
+ * Kumquat Gin theme alterations related to paragraphs.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use \Drupal\paragraphs\Plugin\Field\FieldWidget\ParagraphsWidget;
+
+/**
+ * Implements hook_paragraphs_widget_actions_alter().
+ */
+function kumquat_gin_paragraphs_widget_actions_alter(array &$widget_actions, array &$context) {
+  foreach (['edit', 'collapse', 'duplicate', 'remove'] as $action) {
+    // Move button out of the dropdown.
+    if (isset($widget_actions['dropdown_actions'][$action . '_button'])) {
+      $widget_actions['actions'][$action . '_button'] = $widget_actions['dropdown_actions'][$action . '_button'];
+      unset($widget_actions['dropdown_actions'][$action . '_button']);
+    }
+    if (!isset($widget_actions['actions'][$action . '_button'])) {
+      continue;
+    }
+
+    // Add CSS classes to help styling the button.
+    $classes = $widget_actions['actions'][$action . '_button']['#attributes']['class'];
+    $classes[] = 'button';
+    $classes[] = 'button--' . $action;
+    $widget_actions['actions'][$action . '_button']['#attributes']['class'] = array_unique($classes);
+
+    // Add HTML title attribute for better usability.
+    if (!isset($widget_actions['actions'][$action . '_button']['#attributes']['title'])) {
+      $widget_actions['actions'][$action . '_button']['#attributes']['title'] = $widget_actions['actions'][$action . '_button']['#value'];
+    }
+
+    // Force the theme wrapper so it's a button and not an input.
+    if (!isset($widget_actions['actions'][$action . '_button']['#theme_wrappers'])) {
+      $widget_actions['actions'][$action . '_button']['#theme_wrappers'] = [
+        'input__submit__paragraph_action',
+      ];
+    }
+  }
+}
+
+/**
+ * Implements hook_field_widget_multivalue_form_alter().
+ */
+function kumquat_gin_field_widget_multivalue_form_alter(array &$elements, FormStateInterface $form_state, array $context) {
+  /** @var \Drupal\paragraphs\Plugin\Field\FieldWidget\ParagraphsWidget $widget */
+  $widget = $context['widget'];
+  if (!($widget instanceof ParagraphsWidget)) {
+    return;
+  }
+
+  $elements['#attached']['library'][] = 'kumquat_gin/paragraphs_improvements';
+
+  // Move all global paragraphs' buttons into the dropdown.
+  if (!empty($elements['#field_name'])) {
+    $elements['header_actions']['dropdown_actions'] = $elements['header_actions']['actions'] + $elements['header_actions']['dropdown_actions'];
+    $elements['header_actions']['actions'] = [];
+  }
+}

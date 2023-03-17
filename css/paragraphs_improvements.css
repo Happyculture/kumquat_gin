@@ -1,0 +1,168 @@
+/* Prevent Paragraphs EE hove to make text disappear on hover */
+
+.js .paragraphs-add-dialog--categorized .search-description label,
+.ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .search-description label {
+  color: var(--gin-color-text);
+}
+
+.js .paragraphs-add-dialog--categorized .paragraphs-button--add-more:hover .paragraphs-label,
+.js .paragraphs-add-dialog--categorized .paragraphs-button--add-more:focus .paragraphs-label {
+  color: var(--gin-color-primary);
+}
+
+/* Reduce Paragraphs EE add in between selector multiple lines split */
+
+.js .paragraphs-features__add-in-between__wrapper {
+  width: 90%;
+}
+
+/* Fix Paragraphs EE add in between buttons alignment and being overlapped */
+
+.js .paragraphs-features__add-in-between__wrapper {
+  transform: translate(-50%, -25%);
+  z-index: 100;
+}
+.js .paragraphs-features__add-in-between__row:first-of-type .paragraphs-features__add-in-between__wrapper {
+  transform: translate(-50%, 0%);
+}
+.js .paragraphs-features__add-in-between__row:last-of-type .paragraphs-features__add-in-between__wrapper {
+  transform: translate(-50%, -50%);
+}
+
+/* Improve Paragraphs modal */
+
+.js .paragraphs-add-dialog--categorized .button-group {
+  margin-bottom: 1.5rem;
+}
+
+.js .paragraphs-add-dialog--categorized .paragraphs-add-dialog--categorized .category-title {
+  font-size: 1.25rem;
+}
+
+/* Fix + sign position on hover in paragraphs add modal */
+
+.js .paragraphs-add-dialog--categorized .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--icon::before {
+  margin: 0;
+}
+
+/* Show/hide paragraphs buttons */
+
+.field--type-entity-reference-revisions .drag-and-drop-arrows__wrapper,
+.field--type-entity-reference-revisions .paragraphs-actions {
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+
+.field--type-entity-reference-revisions .draggable:hover > td > div > .form-wrapper > .form-wrapper > .drag-and-drop-arrows__wrapper,
+.field--type-entity-reference-revisions .draggable:focus-within > td > div > .form-wrapper > .form-wrapper > .drag-and-drop-arrows__wrapper,
+.field--type-entity-reference-revisions .draggable:hover > td > div > .form-wrapper > .form-wrapper > .paragraphs-actions,
+.field--type-entity-reference-revisions .draggable:focus-within > td > div > .form-wrapper > .form-wrapper > .paragraphs-actions,
+.field--type-entity-reference-revisions .field-multiple-table:hover > thead .paragraphs-actions,
+.field--type-entity-reference-revisions .field-multiple-table:focus-within > thead .paragraphs-actions {
+  opacity: 1;
+}
+
+/* Hide add before/after buttons by default */
+/* (paragraphs_ee JS code makes them visible on hover) */
+
+.field--type-entity-reference-revisions .paragraphs-features__add-in-between__row:first-child .paragraphs-features__add-in-between__wrapper,
+.field--type-entity-reference-revisions .paragraphs-features__add-in-between__row:last-child .paragraphs-features__add-in-between__wrapper {
+  opacity: 0;
+}
+
+/* Minor adjustments */
+
+.field--type-entity-reference-revisions .paragraph-top {
+  align-items: center;
+}
+
+.field--type-entity-reference-revisions .field-multiple-table > thead {
+  z-index: 1;
+}
+
+/* Use flex instead of floats for buttons */
+
+.field--type-entity-reference-revisions .field-multiple-table > thead > tr > th {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.field--type-entity-reference-revisions .field-multiple-table > thead > tr > th .paragraphs-actions {
+  float: none;
+  margin-right: 0;
+}
+
+/* Reduce vertical size of paragraphs rows */
+
+.field--type-entity-reference-revisions .paragraphs-tabs-wrapper .field-multiple-table .draggable {
+  padding: 0;
+}
+.field--type-entity-reference-revisions .paragraphs-tabs-wrapper .field-multiple-table .draggable .form-wrapper.content-active,
+.field--type-entity-reference-revisions .paragraphs-tabs-wrapper .field-multiple-table .draggable .form-wrapper.behavior-active {
+  padding-top: .5rem;
+}
+
+/* Reduce vertical size of add paragraphs buttons */
+
+.field--type-entity-reference-revisions .paragraphs-features__add-in-between__row .paragraphs-features__add-in-between__wrapper > ul .button--small {
+  padding: .25rem .5rem;
+}
+
+/* Prevent add paragraphs buttons to mess with drop button elements */
+
+.field--type-entity-reference-revisions .paragraphs-features__add-in-between__row .paragraphs-features__add-in-between__wrapper {
+  pointer-events: none;
+}
+.field--type-entity-reference-revisions .paragraphs-features__add-in-between__row .paragraphs-features__add-in-between__wrapper > ul {
+  pointer-events: visible;
+}
+
+/* Change arrows colors */
+
+.field--type-entity-reference-revisions .drag-and-drop-arrows__wrapper .drag-and-drop-arrows__arrow {
+  background-color: var(--gin-color-text-light);
+}
+.field--type-entity-reference-revisions .drag-and-drop-arrows__wrapper .drag-and-drop-arrows__arrow:hover {
+  background-color: var(--gin-color-primary);
+}
+.field--type-entity-reference-revisions .drag-and-drop-arrows__wrapper .drag-and-drop-arrows__arrow:focus-visible {
+  background-color: black;
+}
+
+/* Replace buttons by icons */
+
+.field--type-entity-reference-revisions .button.content-active,
+.field--type-entity-reference-revisions .button.behavior-active,
+.field--type-entity-reference-revisions .button.button--remove,
+.field--type-entity-reference-revisions .button.button--edit,
+.field--type-entity-reference-revisions .button.button--collapse,
+.field--type-entity-reference-revisions .button.button--duplicate {
+  margin: 0 .5em 0 0;
+  padding: 0;
+  text-indent: -999vw;
+  display: block;
+  width: 2em;
+  height: 2em;
+  border-radius: 1em;
+  background: var(--gin-color-primary);
+  mask: no-repeat center center;
+  mask-size: 70% 70%;
+}
+.field--type-entity-reference-revisions .button.content-active {
+  mask-image: url("/themes/contrib/gin/dist/media/sprite.svg#appearance-view");
+}
+.field--type-entity-reference-revisions .button.behavior-active {
+  mask-image: url("/themes/contrib/gin/dist/media/sprite.svg#edit-view");
+}
+.field--type-entity-reference-revisions .button.button--remove {
+  mask-image: url("/themes/contrib/gin/dist/media/sprite.svg#trash-view");
+}
+.field--type-entity-reference-revisions .button.button--edit {
+  mask-image: url("/themes/contrib/gin/dist/media/sprite.svg#edit-view");
+}
+.field--type-entity-reference-revisions .button.button--collapse {
+  mask-image: url("/themes/contrib/gin/dist/media/sprite.svg#hide-view");
+}
+.field--type-entity-reference-revisions .button.button--duplicate {
+  mask-image: url("/themes/contrib/gin/dist/media/sprite.svg#structure-view");
+}
