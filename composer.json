@@ -1,0 +1,12 @@
+{
+    "name": "happyculture/kumquat_gin",
+    "description": "Drupal administration theme extending Gin",
+    "type": "drupal-theme",
+    "licence": "GPL-3.0-or-later",
+    "require": {
+        "drupal/gin": "^3"
+    },
+    "suggest": {
+        "patches": "see README.md"
+    }
+}
