@@ -80,16 +80,33 @@
   z-index: 1;
 }
 
-/* Use flex instead of floats for buttons */
+/* Improve title and buttons position */
 
 .field--type-entity-reference-revisions .field-multiple-table > thead > tr > th {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
+  position: relative;
 }
-.field--type-entity-reference-revisions .field-multiple-table > thead > tr > th .paragraphs-actions {
-  float: none;
+.field--type-entity-reference-revisions .field-multiple-table > thead > tr > th > h4 {
+  padding-block: .5em;
+}
+.field--type-entity-reference-revisions .field-multiple-table > thead > tr > th > .paragraphs-actions {
+  float: right;
   margin-right: 0;
+}
+
+/* Fix disabling dragndrop mode */
+
+.field--type-entity-reference-revisions .field-multiple-table > thead > tr > th:last-child {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  word-wrap: normal;
+}
+
+.field--type-entity-reference-revisions .paragraphs-tabs-wrapper .field-multiple-table .tabledrag-hide > .form-type--select:only-child {
+  display: flex;
+  margin-bottom: 0;
 }
 
 /* Reduce vertical size of paragraphs rows */
