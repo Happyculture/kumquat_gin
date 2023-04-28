@@ -7,7 +7,7 @@
 
 # <a name="intro"></a>Kumquat Gin
 
-Kumquat Gin is an administration theme based on [Gin](https://drupal.org/project/gin) 
+Kumquat Gin is an administration theme based on [Gin](https://drupal.org/project/gin)
 that includes some quality improvements for Kumquat based projects.
 
 ## <a name="installation"></a>Installation
@@ -22,9 +22,6 @@ This theme works best with these patches:
 ```json
 {
     "patches": {
-        "drupal/paragraphs": {
-            "[#3348733] Allow themes to alter paragraphs_widget_actions": "https://git.drupalcode.org/project/paragraphs/-/merge_requests/59.patch"
-        },
         "drupal/paragraphs_ee": {
             "[#3344306] Use CSS class instead of opacity for add-in-between buttons": "https://www.drupal.org/files/issues/2023-02-24/3344306-5-2.0.x.patch"
         },
