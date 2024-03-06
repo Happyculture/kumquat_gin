@@ -5,7 +5,7 @@
     "licence": "GPL-3.0-or-later",
     "require": {
         "drupal/gin": "^3",
-        "drupal/kumquat_core": "^1"
+        "happyculture/kumquat_core": "^1"
     },
     "suggest": {
         "patches": "see README.md"
