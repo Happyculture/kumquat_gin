@@ -72,6 +72,24 @@
   opacity: 0;
 }
 
+/* Improve aspect and show add buttons if the paragraph field is empty */
+
+.field--type-entity-reference-revisions .field-multiple-table > thead > tr > th:nth-last-of-type(2) {
+  border-top-right-radius: var(--gin-border-m);
+  border-bottom-right-radius: var(--gin-border-m);
+}
+
+.field--type-entity-reference-revisions .draggable:has(.delta-order:empty) .tabledrag-cell-content,
+.field--type-entity-reference-revisions .draggable:has(.delta-order:empty) .tabledrag-cell-content .tabledrag-handle,
+.field--type-entity-reference-revisions .draggable:has(.delta-order:empty) .tabledrag-cell-content .tabledrag-handle::after {
+  margin: 0;
+}
+
+.field--type-entity-reference-revisions .draggable:has(.delta-order:empty) + .paragraphs-features__add-in-between__row,
+.field--type-entity-reference-revisions .draggable:has(.delta-order:empty) + .paragraphs-features__add-in-between__row .paragraphs-features__add-in-between__wrapper {
+  opacity: 1;
+}
+
 /* Minor adjustments */
 
 .field--type-entity-reference-revisions .paragraph-top {
