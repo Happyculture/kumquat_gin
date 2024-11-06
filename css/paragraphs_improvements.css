@@ -154,18 +154,6 @@
   pointer-events: visible;
 }
 
-/* Change arrows colors */
-
-.field--type-entity-reference-revisions .drag-and-drop-arrows__wrapper .drag-and-drop-arrows__arrow {
-  background-color: var(--gin-color-text-light);
-}
-.field--type-entity-reference-revisions .drag-and-drop-arrows__wrapper .drag-and-drop-arrows__arrow:hover {
-  background-color: var(--gin-color-primary);
-}
-.field--type-entity-reference-revisions .drag-and-drop-arrows__wrapper .drag-and-drop-arrows__arrow:focus-visible {
-  background-color: black;
-}
-
 /* Replace buttons by icons */
 
 .field--type-entity-reference-revisions .button.content-active,
