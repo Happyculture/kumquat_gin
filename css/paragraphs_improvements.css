@@ -47,14 +47,14 @@
 
 /* Show/hide paragraphs buttons */
 
-.field--type-entity-reference-revisions .drag-and-drop-arrows__wrapper,
+.field--type-entity-reference-revisions .drag-and-drop-arrows__arrow,
 .field--type-entity-reference-revisions .paragraphs-actions {
   opacity: 0;
   transition: opacity .2s ease-in-out;
 }
 
-.field--type-entity-reference-revisions .draggable:hover > td > div > .form-wrapper > .form-wrapper > .drag-and-drop-arrows__wrapper,
-.field--type-entity-reference-revisions .draggable:focus-within > td > div > .form-wrapper > .form-wrapper > .drag-and-drop-arrows__wrapper,
+.field--type-entity-reference-revisions .draggable:hover > td.field-multiple-drag .drag-and-drop-arrows__arrow,
+.field--type-entity-reference-revisions .draggable:focus-within > td.field-multiple-drag .drag-and-drop-arrows__arrow,
 .field--type-entity-reference-revisions .draggable:hover > td > div > .form-wrapper > .form-wrapper > .paragraphs-actions,
 .field--type-entity-reference-revisions .draggable:focus-within > td > div > .form-wrapper > .form-wrapper > .paragraphs-actions,
 .field--type-entity-reference-revisions .field-multiple-table:hover > thead .paragraphs-actions,
