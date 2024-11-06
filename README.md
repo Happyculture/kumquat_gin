@@ -23,10 +23,9 @@ This theme works best with these patches:
 {
     "patches": {
         "drupal/paragraphs_features": {
-            "[#3159792] Add paragraphs behaviors action button": "https://patch-diff.githubusercontent.com/raw/thunder/paragraphs_features/pull/60.diff",
-            "[#3344296] Clone remove button instead of creating a new one from scratch": "https://www.drupal.org/files/issues/2023-02-24/3344296-4-1.x.patch",
-            "[#3345478] New feature: drag and drop arrows": "https://www.drupal.org/files/issues/2023-03-02/3345478-on-top-of-3159792.patch",
-            "[#3353704] Add-in only works if active theme is claro or gin": "https://git.drupalcode.org/project/paragraphs_features/-/merge_requests/13.patch"
+            "[#3269941] Add paragraphs behaviors action button": "https://www.drupal.org/files/issues/2024-11-06/3269941-11.patch",
+            "[#3344296] Clone remove button instead of creating a new one from scratch": "https://www.drupal.org/files/issues/2024-11-06/3344296-6.patch",
+            "[#3353704] Add-in only works if active theme is claro or gin": "https://www.drupal.org/files/issues/2024-03-22/3353704-mr12-18.patch"
         }
     }
 }
