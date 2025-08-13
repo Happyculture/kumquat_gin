@@ -4,7 +4,7 @@
     "type": "drupal-theme",
     "licence": "GPL-3.0-or-later",
     "require": {
-        "drupal/gin": "^3 || ^4",
+        "drupal/gin": "^4 || ^5",
         "happyculture/kumquat_core": "^1"
     },
     "suggest": {
